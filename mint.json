@@ -78,7 +78,6 @@
       "group": "Endpoint Examples",
       "pages": [
         "api-reference/endpoint/zap",
-        "api-reference/endpoint/post-zap",
         "api-reference/endpoint/approve"
       ]
     }
