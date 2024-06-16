@@ -23,8 +23,8 @@
   ],
   "tabs": [
     {
-      "name": "API Reference",
-      "url": "api-reference"
+      "name": "Documentation",
+      "url": "documentation"
     }
   ],
   "anchors": [],
@@ -32,16 +32,16 @@
     {
       "group": "API Documentation",
       "pages": [
-        "api-reference/introduction",
-        "api-reference/supported",
-        "api-reference/contracts",
-        "api-reference/integration",
-        "api-reference/authentication"
+        "documentation/introduction",
+        "documentation/supported",
+        "documentation/contracts",
+        "documentation/integration",
+        "documentation/authentication"
       ]
     },
     {
       "group": "Endpoint Examples",
-      "pages": ["api-reference/endpoint/zap", "api-reference/endpoint/approve"]
+      "pages": ["documentation/endpoint/zap", "documentation/endpoint/approve"]
     }
   ],
   "footerSocials": {
