@@ -2,8 +2,8 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "SoulSolidity Zap",
   "logo": {
-    "dark": "",
-    "light": ""
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
@@ -27,12 +27,17 @@
       "url": "api-reference"
     }
   ],
-  "anchors": [
-  ],
+  "anchors": [],
   "navigation": [
     {
       "group": "API Documentation",
-      "pages": ["api-reference/introduction", "api-reference/list", "api-reference/contracts", "api-reference/integration", "api-reference/authentication"]
+      "pages": [
+        "api-reference/introduction",
+        "api-reference/supported",
+        "api-reference/contracts",
+        "api-reference/integration",
+        "api-reference/authentication"
+      ]
     },
     {
       "group": "Endpoint Examples",
