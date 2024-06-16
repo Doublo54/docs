@@ -29,13 +29,7 @@
                   },
                   "chain": {
                     "type": "string",
-                    "enum": [
-                      "eth",
-                      "bnb",
-                      "pol",
-                      "arb",
-                      "lna"
-                    ]
+                    "enum": ["bnb", "pol", "lna"]
                   },
                   "rpc": {
                     "type": "string"
@@ -47,9 +41,7 @@
                         "properties": {
                           "lpType": {
                             "type": "string",
-                            "enum": [
-                              "univ2"
-                            ]
+                            "enum": ["univ2"]
                           },
                           "fromToken": {
                             "type": "string"
@@ -89,9 +81,7 @@
                         "properties": {
                           "lpType": {
                             "type": "string",
-                            "enum": [
-                              "gamma"
-                            ]
+                            "enum": ["gamma"]
                           },
                           "fromToken": {
                             "type": "string"
@@ -133,9 +123,7 @@
                         "properties": {
                           "lpType": {
                             "type": "string",
-                            "enum": [
-                              "ichi"
-                            ]
+                            "enum": ["ichi"]
                           },
                           "fromToken": {
                             "type": "string"
@@ -178,9 +166,6 @@
                           "depositGuard": {
                             "type": "string"
                           },
-                          "router": {
-                            "type": "string"
-                          },
                           "vaultDeployer": {
                             "type": "string"
                           },
@@ -203,9 +188,7 @@
                         "properties": {
                           "lpType": {
                             "type": "string",
-                            "enum": [
-                              "lynex"
-                            ]
+                            "enum": ["lynex"]
                           },
                           "fromToken": {
                             "type": "string"
@@ -249,9 +232,7 @@
                         "properties": {
                           "protocol": {
                             "type": "string",
-                            "enum": [
-                              "ApeBond"
-                            ]
+                            "enum": ["ApeBond"]
                           },
                           "bond": {
                             "type": "string"
@@ -262,10 +243,7 @@
                             "default": 1
                           }
                         },
-                        "required": [
-                          "protocol",
-                          "bond"
-                        ],
+                        "required": ["protocol", "bond"],
                         "additionalProperties": false
                       },
                       {
@@ -273,29 +251,19 @@
                         "properties": {
                           "protocol": {
                             "type": "string",
-                            "enum": [
-                              "LynexGauge"
-                            ]
+                            "enum": ["LynexGauge"]
                           },
                           "gauge": {
                             "type": "string"
                           }
                         },
-                        "required": [
-                          "protocol",
-                          "gauge"
-                        ],
+                        "required": ["protocol", "gauge"],
                         "additionalProperties": false
                       }
                     ]
                   }
                 },
-                "required": [
-                  "recipient",
-                  "user",
-                  "chain",
-                  "lpData"
-                ],
+                "required": ["recipient", "user", "chain", "lpData"],
                 "additionalProperties": false
               }
             }
@@ -374,9 +342,7 @@
                           "type": "number"
                         }
                       },
-                      "required": [
-                        "lpAddress"
-                      ],
+                      "required": ["lpAddress"],
                       "additionalProperties": false
                     },
                     "protocolQuote": {
@@ -386,14 +352,10 @@
                           "properties": {
                             "protocol": {
                               "type": "string",
-                              "enum": [
-                                "ApeBond"
-                              ]
+                              "enum": ["ApeBond"]
                             }
                           },
-                          "required": [
-                            "protocol"
-                          ],
+                          "required": ["protocol"],
                           "additionalProperties": false
                         },
                         {
@@ -401,14 +363,10 @@
                           "properties": {
                             "protocol": {
                               "type": "string",
-                              "enum": [
-                                "LynexGauge"
-                              ]
+                              "enum": ["LynexGauge"]
                             }
                           },
-                          "required": [
-                            "protocol"
-                          ],
+                          "required": ["protocol"],
                           "additionalProperties": false
                         }
                       ]
@@ -426,16 +384,11 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "to",
-                        "data"
-                      ],
+                      "required": ["to", "data"],
                       "additionalProperties": false
                     }
                   },
-                  "required": [
-                    "txData"
-                  ],
+                  "required": ["txData"],
                   "additionalProperties": false
                 }
               }
@@ -450,7 +403,7 @@
     "/approve": {
       "post": {
         "operationId": "approve",
-        "description": "Obtain the tx data for a approving tokens for zap",
+        "description": "Zap requires approval to token manager to spend tokens. This is to obtain the tx data for approving token manager for zap",
         "requestBody": {
           "required": true,
           "content": {
@@ -460,13 +413,7 @@
                 "properties": {
                   "chain": {
                     "type": "string",
-                    "enum": [
-                      "eth",
-                      "bnb",
-                      "pol",
-                      "arb",
-                      "lna"
-                    ]
+                    "enum": ["eth", "bnb", "pol", "arb", "lna"]
                   },
                   "token": {
                     "type": "string"
@@ -475,11 +422,7 @@
                     "type": "string"
                   }
                 },
-                "required": [
-                  "chain",
-                  "token",
-                  "amount"
-                ],
+                "required": ["chain", "token", "amount"],
                 "additionalProperties": false
               }
             }
@@ -519,10 +462,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "to",
-                        "data"
-                      ],
+                      "required": ["to", "data"],
                       "additionalProperties": false
                     }
                   },
@@ -575,17 +515,12 @@
                         "type": "string"
                       }
                     },
-                    "required": [
-                      "message"
-                    ],
+                    "required": ["message"],
                     "additionalProperties": false
                   }
                 }
               },
-              "required": [
-                "message",
-                "code"
-              ],
+              "required": ["message", "code"],
               "additionalProperties": false
             }
           }

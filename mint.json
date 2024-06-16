@@ -35,7 +35,7 @@
     },
     {
       "group": "Endpoint Examples",
-      "pages": ["documentation/endpoint/zap", "documentation/endpoint/approve"]
+      "pages": ["documentation/endpoint/approve", "documentation/endpoint/zap"]
     }
   ],
   "footerSocials": {
