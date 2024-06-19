@@ -24,7 +24,7 @@
   "anchors": [],
   "navigation": [
     {
-      "group": "API Documentation",
+      "group": "SoulZap API Documentation",
       "pages": [
         "documentation/introduction",
         "documentation/supported",

@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "https://soulsolidity-zap-api-staging-a4f49d370481.herokuapp.com/"
+      "url": "http://localhost:3000"
     }
   ],
   "paths": {
@@ -29,7 +29,7 @@
                   },
                   "chain": {
                     "type": "string",
-                    "enum": ["bnb", "pol", "lna"]
+                    "enum": ["eth", "bnb", "pol", "arb", "lna"]
                   },
                   "rpc": {
                     "type": "string"
@@ -47,12 +47,6 @@
                             "type": "string"
                           },
                           "fromAmount": {
-                            "type": "string"
-                          },
-                          "toToken0": {
-                            "type": "string"
-                          },
-                          "toToken1": {
                             "type": "string"
                           },
                           "lpAddress": {
@@ -188,18 +182,12 @@
                         "properties": {
                           "lpType": {
                             "type": "string",
-                            "enum": ["lynex"]
+                            "enum": ["solidly"]
                           },
                           "fromToken": {
                             "type": "string"
                           },
                           "fromAmount": {
-                            "type": "string"
-                          },
-                          "toToken0": {
-                            "type": "string"
-                          },
-                          "toToken1": {
                             "type": "string"
                           },
                           "lpAddress": {
@@ -403,7 +391,7 @@
     "/approve": {
       "post": {
         "operationId": "approve",
-        "description": "Zap requires approval to token manager to spend tokens. This is to obtain the tx data for approving token manager for zap",
+        "description": "Obtain the tx data for a approving tokens for zap",
         "requestBody": {
           "required": true,
           "content": {
