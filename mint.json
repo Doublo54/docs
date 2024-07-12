@@ -28,13 +28,13 @@
       "pages": [
         "documentation/introduction",
         "documentation/supported",
-        "documentation/contracts",
         "documentation/integration",
-        "documentation/authentication"
+        "documentation/partnership",
+        "documentation/contracts"
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Endpoints",
       "pages": ["documentation/endpoint/approve", "documentation/endpoint/zap"]
     }
   ],
