@@ -29,7 +29,13 @@
                   },
                   "chain": {
                     "type": "string",
-                    "enum": ["eth", "bnb", "pol", "arb", "lna"]
+                    "enum": [
+                      "eth",
+                      "bnb",
+                      "pol",
+                      "arb",
+                      "lna"
+                    ]
                   },
                   "rpc": {
                     "type": "string"
@@ -41,7 +47,9 @@
                         "properties": {
                           "lpType": {
                             "type": "string",
-                            "enum": ["univ2"]
+                            "enum": [
+                              "univ2"
+                            ]
                           },
                           "fromToken": {
                             "type": "string"
@@ -75,7 +83,9 @@
                         "properties": {
                           "lpType": {
                             "type": "string",
-                            "enum": ["gamma"]
+                            "enum": [
+                              "gamma"
+                            ]
                           },
                           "fromToken": {
                             "type": "string"
@@ -117,7 +127,9 @@
                         "properties": {
                           "lpType": {
                             "type": "string",
-                            "enum": ["ichi"]
+                            "enum": [
+                              "ichi"
+                            ]
                           },
                           "fromToken": {
                             "type": "string"
@@ -182,7 +194,9 @@
                         "properties": {
                           "lpType": {
                             "type": "string",
-                            "enum": ["solidly"]
+                            "enum": [
+                              "solidly"
+                            ]
                           },
                           "fromToken": {
                             "type": "string"
@@ -220,7 +234,9 @@
                         "properties": {
                           "protocol": {
                             "type": "string",
-                            "enum": ["ApeBond"]
+                            "enum": [
+                              "ApeBond"
+                            ]
                           },
                           "bond": {
                             "type": "string"
@@ -231,27 +247,21 @@
                             "default": 1
                           }
                         },
-                        "required": ["protocol", "bond"],
-                        "additionalProperties": false
-                      },
-                      {
-                        "type": "object",
-                        "properties": {
-                          "protocol": {
-                            "type": "string",
-                            "enum": ["LynexGauge"]
-                          },
-                          "gauge": {
-                            "type": "string"
-                          }
-                        },
-                        "required": ["protocol", "gauge"],
+                        "required": [
+                          "protocol",
+                          "bond"
+                        ],
                         "additionalProperties": false
                       }
                     ]
                   }
                 },
-                "required": ["recipient", "user", "chain", "lpData"],
+                "required": [
+                  "recipient",
+                  "user",
+                  "chain",
+                  "lpData"
+                ],
                 "additionalProperties": false
               }
             }
@@ -266,6 +276,25 @@
                 "schema": {
                   "type": "object",
                   "properties": {
+                    "txData": {
+                      "type": "object",
+                      "properties": {
+                        "to": {
+                          "type": "string"
+                        },
+                        "data": {
+                          "type": "string"
+                        },
+                        "from": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "to",
+                        "data"
+                      ],
+                      "additionalProperties": false
+                    },
                     "swapQuote1": {},
                     "swapQuote2": {},
                     "lpQuote": {
@@ -330,7 +359,9 @@
                           "type": "number"
                         }
                       },
-                      "required": ["lpAddress"],
+                      "required": [
+                        "lpAddress"
+                      ],
                       "additionalProperties": false
                     },
                     "protocolQuote": {
@@ -340,10 +371,14 @@
                           "properties": {
                             "protocol": {
                               "type": "string",
-                              "enum": ["ApeBond"]
+                              "enum": [
+                                "ApeBond"
+                              ]
                             }
                           },
-                          "required": ["protocol"],
+                          "required": [
+                            "protocol"
+                          ],
                           "additionalProperties": false
                         },
                         {
@@ -351,32 +386,22 @@
                           "properties": {
                             "protocol": {
                               "type": "string",
-                              "enum": ["LynexGauge"]
+                              "enum": [
+                                "LynexGauge"
+                              ]
                             }
                           },
-                          "required": ["protocol"],
+                          "required": [
+                            "protocol"
+                          ],
                           "additionalProperties": false
                         }
                       ]
-                    },
-                    "txData": {
-                      "type": "object",
-                      "properties": {
-                        "to": {
-                          "type": "string"
-                        },
-                        "data": {
-                          "type": "string"
-                        },
-                        "from": {
-                          "type": "string"
-                        }
-                      },
-                      "required": ["to", "data"],
-                      "additionalProperties": false
                     }
                   },
-                  "required": ["txData"],
+                  "required": [
+                    "txData"
+                  ],
                   "additionalProperties": false
                 }
               }
@@ -401,7 +426,13 @@
                 "properties": {
                   "chain": {
                     "type": "string",
-                    "enum": ["eth", "bnb", "pol", "arb", "lna"]
+                    "enum": [
+                      "eth",
+                      "bnb",
+                      "pol",
+                      "arb",
+                      "lna"
+                    ]
                   },
                   "token": {
                     "type": "string"
@@ -410,7 +441,11 @@
                     "type": "string"
                   }
                 },
-                "required": ["chain", "token", "amount"],
+                "required": [
+                  "chain",
+                  "token",
+                  "amount"
+                ],
                 "additionalProperties": false
               }
             }
@@ -450,7 +485,10 @@
                           "type": "string"
                         }
                       },
-                      "required": ["to", "data"],
+                      "required": [
+                        "to",
+                        "data"
+                      ],
                       "additionalProperties": false
                     }
                   },
@@ -503,12 +541,17 @@
                         "type": "string"
                       }
                     },
-                    "required": ["message"],
+                    "required": [
+                      "message"
+                    ],
                     "additionalProperties": false
                   }
                 }
               },
-              "required": ["message", "code"],
+              "required": [
+                "message",
+                "code"
+              ],
               "additionalProperties": false
             }
           }
